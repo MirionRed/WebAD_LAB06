@@ -59,5 +59,105 @@
     </li>
     <?php endforeach; ?>
   </ol>
+
+<!-- LAB 06 Question 3 -->
+  <?php
+  $parking = [
+    [
+      'vehicleNo' => 'WYR9941',
+      'driver' => 'Tham Mun Fatt',
+      'block' => 'E',
+      'floor' => '2',
+      'bay' => 11,
+    ],
+    [
+      'vehicleNo' => 'PKC7453',
+      'driver' => 'Chia Kim Hooi',
+      'block' => 'C',
+      'floor' => '3A',
+      'bay' => 15,
+    ],
+    [
+      'vehicleNo' => 'WC852E',
+      'driver' => 'Ho Jo Ee',
+      'block' => 'E',
+      'floor' => 'G',
+      'bay' => 34,
+    ],
+    [
+      'vehicleNo' => 'AGP8681',
+      'driver' => 'Foo Yoke Wai',
+      'block' => 'C',
+      'floor' => '3A',
+      'bay' => 19,
+    ],
+    [
+      'vehicleNo' => 'WA1368Y',
+      'driver' => 'Wong Pei Lin',
+      'block' => 'A',
+      'floor' => '1',
+      'bay' => 1,
+    ],
+  ];
+   ?>
+
+   <table>
+     <thead>
+       <tr>
+         <td>Vehicle No.</td>
+         <td>Driver</td>
+         <td>Block</td>
+         <td>Floor</td>
+         <td>Bay No.</td>
+       </tr>
+     </thead>
+     <tbody>
+       <?php foreach ($parking as $i => $i_value): ?>
+       <tr>
+         <?php foreach ($i_value as $j => $j_value): ?>
+         <td>
+           <?= $j_value ?>
+         </td>
+       <?php endforeach; ?>
+       </tr>
+     <?php endforeach; ?>
+     </tbody>
+   </table>
+
+<!-- LAB 06 Question 4 -->
+  <?php
+  $contacts = [
+    [
+      'name' => 'Chia Kim Hooi',
+      'phone' => '+60124044404',
+      'email' => 'chiakh@duck.com',
+      'facebook' => 'xyz.chiakh',
+    ],
+    [
+      'name' => 'Chan Xiao Hui',
+      'phone' => '+60125785678',
+      'email' => 'chanxh@pingguo.com',
+      'facebook' => 'pqr.chanxh',
+    ],
+    [
+      'name' => 'Tan Chin Tiong',
+      'phone' => '+60193163616',
+      'email' => 'tanct@burungtiong.com',
+      'facebook' => 'abc.tanct',
+    ],
+    [
+      'name' => 'Foo Yoke Wai',
+      'phone' => '+60125575552',
+      'email' => 'fooyw@chicken.com',
+      'facebook' => 'ijk.fooyw',
+    ],
+    [
+      'name' => 'Ho Xin Yi',
+      'phone' => '+60195889776',
+      'email' => 'hoxy@myna.com',
+      'facebook' => 'mno.hoxy',
+    ]
+  ];
+   ?>
 </body>
 </html>
