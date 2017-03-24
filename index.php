@@ -159,5 +159,37 @@
     ]
   ];
    ?>
+   <table>
+     <thead>
+       <tr>
+         <td>No.</td>
+         <?php foreach ($contacts[0] as $i => $i_value): ?>
+           <td>
+             <?= $i ?>
+           </td>
+         <?php endforeach; ?>
+       </tr>
+     </thead>
+     <tbody>
+       <?php foreach ($contacts as $i => $i_value): ?>
+         <tr>
+           <td>
+             <?= $i+1; ?>
+           </td>
+           <?php foreach ($i_value as $j => $j_value): ?>
+             <td>
+              <?php if($j == "email"): ?>
+                <a href="mailto:<?= $j_value; ?>"><?= $j_value; ?></a>
+              <?php elseif ($j == "facebook"): ?>
+                <a href="https://www.facebook.com/<?= $j_value; ?>"><?= $j_value; ?></a>
+              <?php else: ?>
+                <?= $j_value; ?>
+              <?php endif; ?>
+            </td>
+           <?php endforeach; ?>
+         </tr>
+       <?php endforeach ?>
+     </tbody>
+   </table>
 </body>
 </html>
